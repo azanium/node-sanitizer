@@ -29,4 +29,4 @@ console.log(sanitizedObject);
 
 ## License
 
-MIT - Suhendra Ahmad
+[MIT License](LICENSE) - [Suhendra Ahmad](https://github.com/azanium)
