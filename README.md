@@ -13,7 +13,7 @@ yarn add node-sanitizer
 ## Use
 
 ```
-const sanitizer = require('sanitizer');
+const sanitizer = require('node-sanitizer');
 
 const obj = {
   username: 'some@email.com',
@@ -21,7 +21,7 @@ const obj = {
   fullname: 'Awesome guy',
 };
 
-const sanitizedObject = sanitizer(obj, ['password]);
+const sanitizedObject = sanitizer(obj, ['password']);
 
 console.log(sanitizedObject);
 
