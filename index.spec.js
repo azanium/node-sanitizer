@@ -58,4 +58,18 @@ describe('Sanitizer', () => {
     expect(sanitizedObj.password).equal(password);
     expect(sanitizedObj.name).equal(name);
   });
+
+  it('should sanitized fields only if they are not null or undefined', () => {
+    obj['confirmPassword'] = null
+    const sanitizedObj = sanitizer(obj, ['email', 'password', 'confirmPassword']);
+
+    expect(sanitizedObj).to.have.property('email');
+    expect(sanitizedObj).to.have.property('password');
+    expect(sanitizedObj).to.have.property('name');
+    expect(sanitizedObj).to.have.property('confirmPassword');
+    expect(sanitizedObj.email).equal(hashedEmail);
+    expect(sanitizedObj.password).equal(hashedPassword);
+    expect(sanitizedObj.name).equal(name);
+    expect(sanitizedObj.confirmPassword).to.be.undefined; 
+  });
 });
