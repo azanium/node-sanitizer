@@ -7,7 +7,7 @@ module.exports = (obj, fields) => {
   _fields.forEach((field) => {
     if (field in sanitizedResult) {
       const value = sanitizedResult[field];
-      const hashedString = crypto.createHash('sha256').update(value).digest('hex');
+      const hashedString = value ? crypto.createHash('sha256').update(value).digest('hex') : undefined;
       sanitizedResult[field] = hashedString;
     }
   });
