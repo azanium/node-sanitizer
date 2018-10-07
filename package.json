@@ -1,6 +1,6 @@
 {
   "name": "node-sanitizer",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Object Sanitizer for sensitive data",
   "main": "index.js",
   "repository": {
